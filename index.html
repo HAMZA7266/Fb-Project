@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to Facebook</title>
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+
+        h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(39, 107, 255);
+            font-size: 80px;
+            margin-top: 200px;
+            padding: 0px 0px 0px 200px;
+
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            padding: 0px 0px 0px 200px;
+            margin-top: -50px;
+
+        }
+
+        .login {
+
+            margin-left: 830px;
+            margin-top: -290px;
+            background-color: rgb(255, 255, 255);
+            /* border: 1px solid #ccc; */
+            border-radius: 15px;
+            height: 400px;
+            width: 450px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+
+
+
+
+        }
+
+        .gg {
+            margin-left: 16px;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 5px;
+            /* border: none; */
+            margin-right: 10px;
+            border: 1px solid #bababa;
+            background-color: #f7f7f7;
+
+
+        }
+
+        .margin {
+            margin-left: 14px;
+            
+        }
+
+        .border {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .button {
+            height: 50px;
+            width: 385px;
+            margin-left: 17px;
+            margin-top: 20px;
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+  
+
+
+
+        .forgot:link {
+            color: #385898;
+            text-decoration: none;
+             margin-left: 150px;
+            
+            
+       
+            
+        }
+        .forgot:hover {
+            color: rgb(3, 210, 148);
+            text-decoration: underline;
+        }
+        .forgot{
+           margin-top: 100px;
+        }
+        .button2 {
+            height: 50px;
+            width: 250px;
+            margin-left: 80px;
+            margin-top: 20px;
+            background-color: #25af19;
+            border: none;
+            border-radius: 6px;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;}
+            .button2:hover{
+                background-color: #119306;
+            }     .button:hover{
+                background-color: #1268d7;
+            }
+    </style>
+    <link rel="icon" href="data:image/png;base64,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">
+</head>
+
+<body>
+    <h1>facebook</h1>
+    <p>Facebook helps you connect and share <br>with the people in your life.</p>
+    <div class="login">
+
+        <div class="margin">
+            <input  class="gg" size="50px" type="text"  placeholder="   Email Address Or Phone Number" >
+
+
+            <input  class="gg" size="50px" type="password" required="2"  placeholder="   Password">
+            <a href="aftersubmiy.html">
+               
+                <input class="button" type="submit" value="login"><br><br></a>
+            
+            <a class="forgot"  href="youtube.com/watch?v=SQTLsWhE5Bc">Forgotten Password?   </a>
+            <br><br>
+            <hr  style="opacity: 0.5;" width="350px" >
+            
+           <a href="fb.html"> <button class="button2">Create new account </button></a>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
